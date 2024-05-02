@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root {
+    --primaryColor: #1D1A39;
+    --hoverColor: #451952;
+    --paleGreen: hsl(96, 75%, 89%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 75%);
+    --bgColor: linear-gradient(to right, #edbad6, #662549, #1D1A39);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html {
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.message {
+    display: none;
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgb(0, 220, 0);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+.btn .icon {
+    margin-left: .5rem;
+}
+
+.btn:hover {
+    color: var(--primaryColor);
+    background: var(--paleGreen);
+}
+
+.loginPage,
+.registerPage {
+    display: flex;
+    justify-content: center; /* Horizontally centers the children */
+    align-items: center; /* Vertically centers the children */
+    height: 100vh; /* Adjust if necessary to take the full viewport height */
+    width: 100%;
+    margin: auto;
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 7px 50px rgb(214, 223, 213);
+    background: linear-gradient(to right,  #662549, #1D1A39);
+}
+
+.container {
+        display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    height: 100%; /* Take the full height of the parent */
+    width: 100%; /* Take the full width of the parent, adjust as needed */
+    position: relative;
+    height: 85vh;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 50px;
+    opacity: 1;
+    flex-direction: row-reverse;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(to bottom, #49005E, #1D1A39);
+    z-index: 1;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 10);
+}
+
+.backgroundDiv {
+    position: relative;
+    display: flex;
+    flex-basis: 60%;
+    width: 70%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    margin-left: auto;
+    margin: auto;
+    border-radius: 40px;
+    overflow: hidden;
+    flex: 1;
+    z-index: 2;
+    
+
+    .centered-image {
+        position: absolute;
+        top: 38%;
+        left: 56.5%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .logo {
+        margin-right: 4.5rem;
+        margin-top: -5rem;
+        width: 250px;
+        height: auto;
+    }
+
+    .above-footer-headtext {
+        position: absolute;
+        bottom: 155px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--whiteColor);
+        font-size: 25px;
+        font-weight: 600;
+        z-index: 2;
+        letter-spacing: 2px;
+    }
+    .above-footer-text {
+        position: absolute;
+        bottom: 115px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--whiteColor);
+        font-size: 13.5px;
+        font-weight: 100;
+        z-index: 2;
+        white-space: nowrap;
+    }
+    .indicator-container {
+        display: flex;
+        margin-top: 480px;
+        overflow: visible;
+        justify-content: center;
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #aaa;
+            }
+
+            &.active {
+                background-color: #662549;
+            }
+        }
+    }
+}
+
+.backgroundDiv .footerDiv {
+    position: absolute;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.backgroundDiv .textDiv {
+    position: relative;
+    z-index: 2;
+}
+
+.backgroundDiv .textDiv .title {
+    color: var(--whiteColor);
+    font-size: 35px;
+    font-weight: 800;
+    z-index: 2;
+}
+
+.backgroundDiv .textDiv p {
+    color: var(--whiteColor);
+    padding: 1rem;
+    font-weight: 400;
+}
+
+.backgroundDiv .footerDiv {
+    bottom: 10px;
+    padding: 0 1rem;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.248);
+    left: 10px;
+    right: 10px;
+    justify-content: space-between;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+}
+
+.backgroundDiv .footerDiv .text {
+    color: var(--whiteColor);
+}
+
+.backgroundDiv .footerDiv .btn {
+    background: var(--whiteColor);
+    color: var(--primaryColor);
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.backgroundDiv .footerDiv .btn:hover {
+    background: var(--hoverColor);
+    color: var(--whiteColor);
+}
+
+.formDiv {
+    flex-basis: 40%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1rem; /* Reduced gap size */
+    padding: 1rem; /* Added padding inside the div for spacing */
+    background-color: #f3f3f3;
+    height: 85vh; /* Adjusted to viewport height */
+    overflow-y: scroll; /* Added scroll */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 40px; /* Match the border radius with the rounded corners */
+    z-index: 2;
+    position: relative; /* Ensure that the positioning context is set */
+    gap: 1rem;
+    padding-right: 20px; // Adjust the padding as needed
+    padding-bottom: 20px; // This ensures that the scrollbar does not touch the bottom edge of the div
+    box-sizing: border-box; // This ensures that padding is included in the width and height
+    padding-left: 30px;
+    overflow-y: auto; // Ensure that this is set to auto to show scrollbar when needed
+    border: 1px solid #ccc; // Adjust color as needed to match the formDiv background
+    scrollbar-width: thin; // For Firefox
+    scrollbar-color: #6e6e6e transparent; // For Firefox, adjust colors as needed
+
+        // For Webkit browsers like Chrome and Safari
+        &::-webkit-scrollbar {  
+            width: 8px; // Adjust the width as needed
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: transparent; // Adjust track background as needed
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: #c0c0c0; // Adjust thumb color as needed
+            border-radius: 10px; // Adjust for rounded corners if desired
+            border: 3px solid transparent; // Adjust border to create padding around the thumb
+        }
+    }
+
+
+.loginFormDiv {
+    justify-content: center; // This will center the content vertically
+}
+
+
+.formDiv .headerDiv {
+    position: relative;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.formDiv .headerDiv img {
+    width: 60px;
+    padding-bottom: .5rem;
+}
+
+.formDiv .headerDiv h3 {
+    position: absolute;
+    font-size: 40px;
+    color: var(--blackColor);
+    font-weight: 600;
+    text-align: left;
+    margin-left: -180px;
+    margin-top: -20px;
+    white-space: nowrap;
+}
+
+.form .inputDiv .icon {
+    color: var(--greyText);
+}
+
+.form .inputDiv input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 300px;
+}
+
+.form .inputDiv label {
+    color: var(--blackColor);
+    font-weight: 400;
+    font-size: 14px;
+    padding: .5rem 0;
+    display: block;
+}
+
+.form .inputDiv .input {
+    gap: .5rem;
+    padding: 1rem;
+    background: var(--whiteColor);
+    border-radius: 25px;
+}
+
+.form .btn {
+    padding: .8rem;
+    background: #1D1A39;
+    border-radius: 20px;
+    color: var(--whiteColor);
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    height: 4rem;
+    width: 100%;
+    font-weight: 700;
+    gap: .5rem;
+    transition: .6s ease;
+}
+
+.form .btn .icon {
+    font-size: 25px;
+    transition: .3s ease;
+}
+
+.form .btn:hover {
+    background: linear-gradient(to right, #662549, #1D1A39);
+    color: var(--whiteColor);;
+}
+
+.form .btn:hover .icon {
+    color: var(--whiteColor);
+    transform: translateX(5px);
+}
+
+.form .forgotPassword {
+    font-size: 13px;
+    color: var(--blackColor);
+    opacity: .7;
+    text-align: center;
+}
+
+.form .forgotPassword a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+.dashboard .dashboardContainer {
+    height: 95vh;
+    width: 95%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgb(194, 194, 194);
+}
+
+.password-requirements {
+    color: red;
+    font-size: var(--smallestFontSize); 
+    margin-top: 0.5rem;
+    line-height: 1.2;
+}
+
+.change-text-btn {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    z-index: 2;
+
+    &:hover {
+        background: none;
+    }
+}
+
+
+.change-text-btn:hover {
+    background: var(--hoverColor);
+}
+
+
+.next-btn {
+    background: none;
+    color: var(--whiteColor);
+    padding: .3rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s ease;
+    margin-bottom: -25px;
+    margin-left: 75px
+}
+
+.prev-btn {
+    background: none;
+    color: var(--whiteColor);
+    padding: .3rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s ease;
+    margin-bottom: -25px;
+    margin-left: -75px
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: rgba(255, 255, 255, 0.248);
+}
+
+.termsAndConditions {
+    display: flex;
+    align-items: center; // Keeps the checkbox and text aligned
+    margin-top: 0.5rem; // Reduce the top margin to bring elements closer
+    font-size: 0.75rem; // Slightly smaller to compress text
+    line-height: 1.2; // Tighten line spacing to compress the text vertically
+
+    input[type="checkbox"] {
+        margin-right: 0.3rem; // Reduce space between checkbox and text
+    }
+
+    .termsLabel {
+        color: var(--blackColor); // Ensures the text is readable
+        text-align: left; // Keeps text aligned to the left
+        white-space: normal; // Ensures text wraps within the container
+        max-width: 90%; // Prevents text stretching too wide, adjust as needed
+    }
+}
+
+.error-message {
+    width: 100%;  // Ensure full container width for better readability
+    text-align: center;
+    color: red;
+    background-color: #fff4f4; // Light background for the error text
+    padding: 10px 5px; // Suitable padding for visibility
+    border: 1px solid red; // Defines the error boundary clearly
+    font-size: 0.75rem; // Maintain a smaller font size for error text
+    margin-top: 10px; // Adds some space between the header and the message
+    margin-bottom: -5px; // Pushes the form content down
+}
+
+.input-error {
+    border: 1px solid red !important; /* Ensures the style takes precedence */
+}
+
+
+
+@media screen and (max-width: 602px) {
+    .loginPage, .registerPage {
+        .container {
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            padding: 1.5rem;
+        }
+
+        .backgroundDiv {
+            width: 100%;
+        }
+
+        .backgroundDiv .textDiv .title {
+            font-size: 20px;
+        }
+
+        .backgroundDiv .textDiv p {
+            padding: 1rem;
+        }
+
+        .backgroundDiv .footerDiv .text {
+            font-size: 12px;
+        }
+
+        .backgroundDiv .footerDiv .btn {
+            padding: .4rem 1.5rem;
+        }
+
+        .formDiv {
+            gap: 1rem;
+            transform: translateY(-.5rem);
+        }
+
+        .formDiv .headerDiv {
+            padding: 1rem 0;
+        }
+
+        .formDiv .headerDiv img {
+            width: 40px;
+        }
+
+        .formDiv .headerDiv h3 {
+            font-size: 20px;
+        }
+
+        .form .inputDiv input {
+            width: 100%;
+        }
+    }
+}
+
