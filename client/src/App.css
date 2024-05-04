@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --primaryColor: #1D1A39;
+  --hoverColor: #451952;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 75%);
+  --bgColor: linear-gradient(to right, #edbad6, #662549, #1D1A39);
+  --inputColor: hsl(330, 12%, 97%);
+  --inputColor: hsl(154, 14%, 90%);
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+html {
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-size: var(--h2FontSize);
+  cursor: pointer;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.message {
+  display: none;
+}
+
+.showMessage {
+  display: block;
+  color: var(--whiteColor);
+  padding: 10px;
+  background: rgb(0, 220, 0);
+  border-radius: 3px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--greyText);
+}
+
+.btn .icon {
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  color: var(--primaryColor);
+  background: var(--paleGreen);
+}
+
+.loginPage,
+.registerPage {
+  display: flex;
+  justify-content: center; /* Horizontally centers the children */
+  align-items: center; /* Vertically centers the children */
+  height: 100vh; /* Adjust if necessary to take the full viewport height */
+  width: 100%;
+  margin: auto;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+  background: linear-gradient(to right, #662549, #1D1A39);
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  height: 100%; /* Take the full height of the parent */
+  width: 100%; /* Take the full width of the parent, adjust as needed */
+  position: relative;
+  height: 85vh;
+  width: 75%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 50px;
+  opacity: 1;
+  flex-direction: row-reverse;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(to bottom, #49005E, #1D1A39);
+  z-index: 1;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.backgroundDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 60%;
+  width: 70%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: auto;
+  margin: auto;
+  border-radius: 40px;
+  overflow: hidden;
+  flex: 1;
+  z-index: 2;
+}
+.backgroundDiv .centered-image {
+  position: absolute;
+  top: 38%;
+  left: 56.5%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+.backgroundDiv .logo {
+  margin-right: 4.5rem;
+  margin-top: -5rem;
+  width: 250px;
+  height: auto;
+}
+.backgroundDiv .above-footer-headtext {
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--whiteColor);
+  font-size: 25px;
+  font-weight: 600;
+  z-index: 2;
+  letter-spacing: 2px;
+}
+.backgroundDiv .above-footer-text {
+  position: absolute;
+  bottom: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--whiteColor);
+  font-size: 13.5px;
+  font-weight: 100;
+  z-index: 2;
+  white-space: nowrap;
+}
+.backgroundDiv .indicator-container {
+  display: flex;
+  margin-top: 480px;
+  overflow: visible;
+  justify-content: center;
+}
+.backgroundDiv .indicator-container .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.backgroundDiv .indicator-container .dot:hover {
+  background-color: #aaa;
+}
+.backgroundDiv .indicator-container .dot.active {
+  background-color: #662549;
+}
+
+.backgroundDiv .footerDiv {
+  position: absolute;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.backgroundDiv .textDiv {
+  position: relative;
+  z-index: 2;
+}
+
+.backgroundDiv .textDiv .title {
+  color: var(--whiteColor);
+  font-size: 35px;
+  font-weight: 800;
+  z-index: 2;
+}
+
+.backgroundDiv .textDiv p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  font-weight: 400;
+}
+
+.backgroundDiv .footerDiv {
+  bottom: 10px;
+  padding: 0 1rem;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.248);
+  left: 10px;
+  right: 10px;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.backgroundDiv .footerDiv .text {
+  color: var(--whiteColor);
+}
+
+.backgroundDiv .footerDiv .btn {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.backgroundDiv .footerDiv .btn:hover {
+  background: var(--hoverColor);
+  color: var(--whiteColor);
+}
+
+.formDiv {
+  flex-basis: 40%;
+  margin: auto;
+  flex-direction: column;
+  gap: 1rem; /* Reduced gap size */
+  padding: 1rem; /* Added padding inside the div for spacing */
+  background-color: #f3f3f3;
+  height: 85vh; /* Adjusted to viewport height */
+  overflow-y: scroll; /* Added scroll */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 40px; /* Match the border radius with the rounded corners */
+  z-index: 2;
+  position: relative; /* Ensure that the positioning context is set */
+  gap: 1rem;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+.formDiv::-webkit-scrollbar {
+  width: 8px;
+}
+.formDiv::-webkit-scrollbar-track {
+  background: transparent;
+}
+.formDiv::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+.loginFormDiv {
+  justify-content: center;
+}
+
+.formDiv .headerDiv {
+  position: relative;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.formDiv .headerDiv img {
+  width: 60px;
+  padding-bottom: 0.5rem;
+}
+
+.formDiv .headerDiv h3 {
+  position: absolute;
+  font-size: 40px;
+  color: var(--blackColor);
+  font-weight: 600;
+  text-align: left;
+  margin-left: -180px;
+  margin-top: -20px;
+  white-space: nowrap;
+}
+
+.form .inputDiv .icon {
+  color: var(--greyText);
+}
+
+.form .inputDiv input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 300px;
+}
+
+.form .inputDiv label {
+  color: var(--blackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.form .inputDiv .input {
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--whiteColor);
+  border-radius: 25px;
+}
+
+.form .btn {
+  padding: 0.8rem;
+  background: #1D1A39;
+  border-radius: 20px;
+  color: var(--whiteColor);
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 4rem;
+  width: 100%;
+  font-weight: 700;
+  gap: 0.5rem;
+  transition: 0.6s ease;
+}
+
+.form .btn .icon {
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.form .btn:hover {
+  background: linear-gradient(to right, #662549, #1D1A39);
+  color: var(--whiteColor);
+}
+
+.form .btn:hover .icon {
+  color: var(--whiteColor);
+  transform: translateX(5px);
+}
+
+.form .forgotPassword {
+  font-size: 13px;
+  color: var(--blackColor);
+  opacity: 0.7;
+  text-align: center;
+}
+
+.form .forgotPassword a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dashboard {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+.dashboard .dashboardContainer {
+  height: 95vh;
+  width: 95%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgb(194, 194, 194);
+}
+
+.password-requirements {
+  color: red;
+  font-size: var(--smallestFontSize);
+  margin-top: 0.5rem;
+  line-height: 1.2;
+}
+
+.change-text-btn {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+  z-index: 2;
+}
+.change-text-btn:hover {
+  background: none;
+}
+
+.change-text-btn:hover {
+  background: var(--hoverColor);
+}
+
+.next-btn {
+  background: none;
+  color: var(--whiteColor);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  margin-bottom: -25px;
+  margin-left: 75px;
+}
+
+.prev-btn {
+  background: none;
+  color: var(--whiteColor);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  margin-bottom: -25px;
+  margin-left: -75px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(255, 255, 255, 0.248);
+}
+
+.termsAndConditions {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+.termsAndConditions input[type=checkbox] {
+  margin-right: 0.3rem;
+}
+.termsAndConditions .termsLabel {
+  color: var(--blackColor);
+  text-align: left;
+  white-space: normal;
+  max-width: 90%;
+}
+
+.error-message {
+  width: 100%;
+  text-align: center;
+  color: red;
+  background-color: #fff4f4;
+  padding: 10px 5px;
+  border: 1px solid red;
+  font-size: 0.75rem;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+.input-error {
+  border: 1px solid red !important; /* Ensures the style takes precedence */
+}
+
+@media screen and (max-width: 602px) {
+  .loginPage .container, .registerPage .container {
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .loginPage .backgroundDiv, .registerPage .backgroundDiv {
+    width: 100%;
+  }
+  .loginPage .backgroundDiv .textDiv .title, .registerPage .backgroundDiv .textDiv .title {
+    font-size: 20px;
+  }
+  .loginPage .backgroundDiv .textDiv p, .registerPage .backgroundDiv .textDiv p {
+    padding: 1rem;
+  }
+  .loginPage .backgroundDiv .footerDiv .text, .registerPage .backgroundDiv .footerDiv .text {
+    font-size: 12px;
+  }
+  .loginPage .backgroundDiv .footerDiv .btn, .registerPage .backgroundDiv .footerDiv .btn {
+    padding: 0.4rem 1.5rem;
+  }
+  .loginPage .formDiv, .registerPage .formDiv {
+    gap: 1rem;
+    transform: translateY(-0.5rem);
+  }
+  .loginPage .formDiv .headerDiv, .registerPage .formDiv .headerDiv {
+    padding: 1rem 0;
+  }
+  .loginPage .formDiv .headerDiv img, .registerPage .formDiv .headerDiv img {
+    width: 40px;
+  }
+  .loginPage .formDiv .headerDiv h3, .registerPage .formDiv .headerDiv h3 {
+    font-size: 20px;
+  }
+  .loginPage .form .inputDiv input, .registerPage .form .inputDiv input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=App.css.map */
