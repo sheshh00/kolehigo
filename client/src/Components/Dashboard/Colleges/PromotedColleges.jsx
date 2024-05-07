@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios'; // Ensure Axios is imported
-import CPU from '../../../DashboardAssets/CollegesAssets/CPU.png';
+import Axios from 'axios';
 
-const PromotedColleges = () => {
+
+const PromotedColleges = ({ addToColleges }) => { // Accept addToColleges function as a prop
   const [colleges, setColleges] = useState([]);
 
   useEffect(() => {
@@ -15,19 +15,22 @@ const PromotedColleges = () => {
       });
   }, []);
 
+  const handleAddToColleges = (college) => {
+    addToColleges(college); // Call the addToColleges function with the selected college
+  };
+
   return (
     <div className='Promoted-colleges'>
       {colleges.map((college) => (
-        <div className='CPU' key={college.id}>
+        <div className='college' key={college.id}>
           <div className='Left'>
-            {/* Assuming `college.logo` is the path to the image */}
-            <img src={college.logo || CPU} alt={college.name} className='CPU-logo'/>
+            <img src={college.logo} alt={college.name} className='logo'/>
             <h5>{college.name}</h5>
-            {/* Removed the <h> tag as it is not valid HTML */}
             <p>{college.address}</p>
           </div>
           <div className="Right">
-            <button className='Add-colleges'>Add to Colleges</button>
+            {/* Pass the college object to the handleAddToColleges function */}
+            <button className='Add-colleges' onClick={() => handleAddToColleges(college)}>Add to Colleges</button>
             <button className='view'>View</button>
           </div>
         </div>
@@ -37,4 +40,3 @@ const PromotedColleges = () => {
 };
 
 export default PromotedColleges;
-

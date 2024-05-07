@@ -31,25 +31,6 @@ const Colleges = () => {
                 <div className = "HorizontalContainer2"> 
                     {<CollegeList />}
                 </div>
-                {/* 
-                <div className='grid'>
-                    <div style={{height: '100px'}}>
-                    <div className='CPU1'>
-                                <img src={CPU} style={{ width: '30px', height: '30px', marginRight: '10px' }} />
-                                <h5>Central Phillippine Unviersity</h5>
-                                <p><h6>BS in Software Engineering  </h6></p>
-                                <button className='Add-colleges'><h5>Add to colleges</h5></button>
-                                <button className='view'><h5>View</h5></button>
-                        </div>
-                        <div className='San-Agustin1'>
-                            <img src={CPU} style={{ width: '30px', height: '30px', marginRight: '10px' }}/>
-                                <h5>San Agustin</h5>
-                                <p><h6>BS in Computer Engineering</h6></p>
-                                <button className='Add-colleges'><h5>Add to colleges</h5></button>
-                                <button className='view'><h5>View</h5></button>
-                        </div>
-                    </div>
-                 </div> */}
             </div>
         </div>
     );

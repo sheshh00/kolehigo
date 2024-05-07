@@ -37,6 +37,9 @@ const Login = () => {
                 navigateTo('/');
                 setLoginStatus('Credentials Do Not Exist!');
             } else {
+                console.log("response", response.data)
+                const { id } = response.data
+                localStorage.setItem('userId', id)
                 navigateTo('/Dashboard');
             }
         });
