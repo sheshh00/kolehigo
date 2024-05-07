@@ -6,7 +6,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 
 // UNDER PROFILE TAB
 import LogInCredentials from './Components/Dashboard/ProfileTab/LogInCredentials/LogInCredentials';
-import MyColleges from './Components/Dashboard/ProfileTab/MyColleges/MyColleges';
+// import MyColleges from './Components/Dashboard/ProfileTab/MyColleges/MyColleges';
 
 // UNDER DASHBOARD
 import Colleges from './Components/Dashboard/Colleges/Colleges';
@@ -43,10 +43,10 @@ const router = createBrowserRouter([
     path: '/LogInCredentials',
     element: <div><LogInCredentials/></div>
   },
-  {
-    path: '/MyColleges',
-    element: <div><MyColleges/></div>
-  },
+  // {
+  //   path: '/MyColleges',
+  //   element: <div><MyColleges/></div>
+  // },
 ]);
 
 function App() {
