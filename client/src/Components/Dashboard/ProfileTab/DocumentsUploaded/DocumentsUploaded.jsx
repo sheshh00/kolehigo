@@ -1,9 +1,10 @@
+
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './LogInCredentials.css'
+import './DocumentsUploaded.css'
 import '../../../../App.css'
 import SideBar from '../../../../Components/Dashboard/VerticalContainer'
-
+import Submissiontab from './Submissiontab';
 //icons for Dashboard
 
 //icons for Profile
@@ -11,12 +12,10 @@ import Profile1 from '../../../../DashboardAssets/ProfileAssets/Profile_Icon.png
 //profile tab is default..//applicant information is default
 
 
-
-
-const LogInCredentials = () => {
+const DocumentsUploaded = () => {
     return (
         <div>
-           <div className='Grid1'>
+           <div className='Grid7'>
                 <div className='VerticalContainer'>
                     <SideBar/>
                  </div>
@@ -28,23 +27,24 @@ const LogInCredentials = () => {
                         </h1>
                     </div>
                     <div className="MiniTabs">
-                        <Link to='/Dashboard'><button className="ApplicantInfo">Applicant's Information</button></Link>
-                        <Link to='/LogInCredentials'><button className="LogCred">Log In Credentials</button></Link>
+                        <Link to={'/Dashboard'}><button className="ApplicantInfo">Applicant's Information</button></Link>
+                        <Link to={'/LogInCredentials'}><button className="LogCred">Log In Credentials</button></Link>
                         <Link to={'/EducationalBackground'}><button className="EduBack">Educational Background</button></Link>
                         <Link to={'/MyColleges'}><button className="MyColleges">My Colleges</button></Link>
-                        <button className="InterSchol">Interested Scholarships</button>
+                        <button classname="InterSchol">Interested Scholarships</button>
                         <Link to={'/DocumentsUploaded'}><button className="DocUplo">Documents Uploaded</button></Link>
                     </div>
                     <div className ="ProfilePrompt">
-                        <h1>Log Information</h1>
-                        <p>Update, strengthen, and reinforce your accounts security</p>
+                        <h1>Documents Uploaded</h1>
+                        <p>Upload general documentary requirements needed for your applied college</p>
                     </div>
                 </div>
                 <div class="HorizontalContainerBOTTOM">
+                    <Submissiontab/>
                 </div>
             </div>
         </div>
     )
 }
 
-export default LogInCredentials
+export default DocumentsUploaded

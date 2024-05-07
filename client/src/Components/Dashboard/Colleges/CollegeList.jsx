@@ -3,6 +3,7 @@ import Axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../Colleges/Colleges.scss';
 import { useColleges } from '../Colleges/CollegeContext.jsx';
+import { Link } from 'react-router-dom';
 
 const CollegeList = () => {
     const [colleges, setColleges] = useState([]);
@@ -103,7 +104,11 @@ const CollegeList = () => {
                         >
                             {addedColleges[college.id] ? "College Added" : "Add to Colleges"}
                         </button>
-                        <button className="view">View</button>
+                        {colleges.name === "Central Philippine University" && (
+                            <Link to={'/CollegeView'}>  
+                            <button className="view">View</button>
+                            </Link>
+                        )}
                     </div>
                 </div>
             ))}
@@ -112,5 +117,4 @@ const CollegeList = () => {
 };
 
 export default CollegeList;
-
 

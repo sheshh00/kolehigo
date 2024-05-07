@@ -11,9 +11,13 @@ import MyColleges from './Components/Dashboard/ProfileTab/MyColleges/MyColleges'
 // UNDER DASHBOARD
 import Colleges from './Components/Dashboard/Colleges/Colleges';
 
-// AUTHENTICATION PAGES
-import Login from './Components/Login/Login';
-import Register from './Components/Register/Register';
+//DISREGARD
+import Login from './Components/Login/Login'
+import Register from './Components/Register/Register'
+//TABS
+
+//Under view tab for colleges
+import CollegeView from './Components/Dashboard/Colleges/CollegeView/CollegeView'
 
 // CONTEXT PROVIDER
 import { CollegeProvider } from './Components/Dashboard/Colleges/CollegeContext.jsx'
@@ -21,23 +25,22 @@ import { CollegeProvider } from './Components/Dashboard/Colleges/CollegeContext.
 // ROUTING
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-// Defining router
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div><Login/></div>
+    element:  <div><Login/></div>
   },
   {
     path: '/register',
-    element: <div><Register/></div>
+    element:  <div><Register/></div>
   },
   {
     path: '/Dashboard',
-    element: <div><Dashboard/></div>
+    element:  <div><Dashboard/></div>
   },
   {
     path: '/Colleges',
-    element: <div><Colleges/></div>
+    element:  <div><Colleges/></div>
   },
   {
     path: '/LogInCredentials',

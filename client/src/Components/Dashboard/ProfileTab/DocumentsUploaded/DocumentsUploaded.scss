@@ -1,12 +1,12 @@
 //DASHBOARD WITH DEFAULT PROFILE
 
-.Grid {
+.Grid7 {
     background-image: linear-gradient(rgb(102 37 73),rgb(73 0 94));
-    overflow: hidden;
+    
     //vertical container
     .VerticalContainer {
         background-image: linear-gradient(rgb(102 37 73),rgb(73 0 94), rgb(29 26 57));
-        width: 85px;
+        width: 160px;
         height: 1000px; 
         position: fixed;
         
@@ -23,7 +23,7 @@
         }
         
         button:hover {
-            background-color:   rgb(217 217 217);
+            background-color:rgb(217 217 217);
             color: black;
         
             img {
@@ -40,7 +40,7 @@
         }
         
         .Profile {
-            margin-top: 36px;
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -94,13 +94,14 @@
         }
     }
     
+    
     //HorizontalContainer
     .HorizontalContainer {
         background-color: rgb(217 217 217);
         padding: 10px;
-        width: 1746px; 
-        height: 200px;
-        margin-left: 85.1px; 
+        width: 1546px; 
+        height: 360px;
+        margin-left: 160px; 
         border-top-left-radius: 25px; 
         border-top-right-radius: 25px;
         border-bottom-left-radius: 15px; 
@@ -114,7 +115,7 @@
             button{
                 background-color: rgba(255, 0, 0, 0);
                 font-size: 18px;
-                font-weight:500;
+                font-weight:500; 
                 border: 0px;
                 margin-left: 35px;
                 cursor: pointer;
@@ -126,13 +127,13 @@
             }
         }
        
-        .ApplicantInfo{
+        .DocUplo {
             text-decoration: underline;
             text-decoration-color: rgb(69 25 82);
         }
-    
-        button.ApplicantInfo{
-            &:hover{
+        
+        button.DocUplo {
+            &:hover {
                 color: rgb(0, 0, 0);
             }
         }
@@ -153,21 +154,22 @@
     
         .NameDis{
             display: flex;
+            margin-top: 20px;
             margin-left: 130px;
             h1{
-                margin-top: 25px;
+                margin-top: 40px;
                 margin-left: 40px;
                 font-size: 40px;
                 font-weight: 500;
                 p {
                     font-weight: 300;
-                    font-size: 20px;
+                    font-size: 30px;
                 }
             }
             
             img{
-                height: 130px;
-                width: auto;
+                height: 170px;
+                width: 170px;
             }
         }
     }
@@ -177,86 +179,36 @@
         background-color: rgb(217 217 217);
         padding: 10px;
         width: 1546px; 
-        height: 532px;
-        margin-left: 85px;  
+        height: 411px;
+        margin-left: 160px; 
+        border-top-left-radius: 25px; 
         border-top-right-radius: 25px;
-    
-        form {
-            display: flex;
-            margin-top: 95px;
-            margin-left: 90px;   
-         }
-         
-         
-        #FirstName, #MiddleName, #LastName, #Suffix{
-            width: 600px;
-            padding: 20px;
+        overflow-y: auto;
+        .FileUpload{
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.19), 0 6px 2px rgba(0, 0, 0, 0.23); // Soft, spread shadow
+            margin-left: 300px;
+            background-color: white;
+            border-radius: 25px;
+            width: 800px;
             margin-top: 20px;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            h1{
+                margin-left: 20px;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            form{
+                margin-left: 20px;
+                font-size: 15px;
+            }
+            .SelectedFiles{
+                margin-left: 500px;
+                h2{
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
         }
-    
-        #DateofBirth, #Address{
-            width: 600px;
-            padding: 20px;
-            margin-top: 20px;
-            margin-right: 500px;
-            margin-left: 50px;
-            border: none;
-            border-radius: 15px;
-            font-size: 16px;
-        }
-        
-        #DateofBirth {
-            width: 600px;
-            margin: 0;
-            margin-left: 50px;
-            font-weight: 300;
-            padding-top: 40px;
-        }
-
-        #DateofBirthLabel {
-            padding-top: 10px;
-            position: absolute;
-            margin-left: 70px;
-            padding-left: 20px;
-            font-size: 17px;
-            margin-left: 50px;
-            border-radius: 15px;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 300;
-        }
-        
-        #DateofBirthLabel,  #DateofBirth{
-            margin-top: 20px;
-        }
-    
-        button {
-            font-size: 20px;
-            font-weight: bold;
-            margin-left: 450px;
-            padding: 20px;
-            margin-top: 50px;
-            padding-left: 45px;
-            padding-right: 45px;
-            border-radius: 20px;
-            background-color: rgb(69 25 82);
-            color: white;
-            border: none;
-            cursor: pointer;
-            
-        }
-    
-        button:hover {
-            background-color: rgb(105, 39, 125);
-        }
-
-        .error-message {
-            position: absolute;
-            margin-left: 350px;
-            color: rgba(255, 0, 0, 0.547);
-            width: 100px;
-        }
-    }  
+    }
 }
