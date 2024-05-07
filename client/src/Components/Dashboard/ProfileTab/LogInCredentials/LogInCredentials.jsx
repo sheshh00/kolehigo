@@ -11,8 +11,6 @@ import Profile1 from '../../../../DashboardAssets/ProfileAssets/Profile_Icon.png
 //profile tab is default..//applicant information is default
 
 
-
-
 const LogInCredentials = () => {
     return (
         <div>

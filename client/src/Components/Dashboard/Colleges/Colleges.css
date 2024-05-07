@@ -83,6 +83,85 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.Grid0 .VerticalContainer .Notifications {
+  margin-left: 38px;
+  border: none;
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Grid0 .VerticalContainer .Notifications img {
+  margin-left: 2px;
+  width: 50px;
+  height: 40px;
+}
+.Grid0 .VerticalContainer .Notifications:hover {
+  color: rgba(253, 253, 253, 0.697);
+  background-color: rgba(155, 97, 22, 0);
+}
+.Grid0 .VerticalContainer .Logout {
+  border: none;
+  margin-left: 50px;
+  margin-top: 60px;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+.Grid0 .VerticalContainer .Logout img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.Grid0 .VerticalContainer .Logout:hover {
+  color: rgba(211, 211, 211, 0.566);
+  background-color: rgba(155, 97, 22, 0);
+}
+.Grid0 .VerticalContainer .Notifications:hover img,
+.Grid0 .VerticalContainer .Logout:hover img {
+  filter: invert(30%);
+}
+.Grid0 .VerticalContainer .notification-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content {
+  height: 500px;
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.448);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: aliceblue;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content h2 {
+  margin-bottom: 10px;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content button {
+  margin-top: 360px;
+  padding: 8px 20px;
+  border: none;
+  background-color: #eeeeee;
+  color: rgb(3, 3, 3);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content button:hover {
+  background-color: rgba(255, 255, 255, 0.4235294118);
+}
 .Grid0 .HorizontalContainer {
   background-image: linear-gradient(rgb(73, 0, 94), rgb(102, 37, 73), rgb(102, 37, 73));
   margin-left: 160px;
@@ -136,7 +215,7 @@
   position: absolute;
 }
 .Grid0 .HorizontalContainer1 {
-  width: 1500px;
+  width: 1547px;
   height: 170px;
   background-color: rgb(217, 217, 217);
   margin-left: 160px;
@@ -144,7 +223,6 @@
   position: absolute;
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent items from wrapping */
-  padding-bottom: 20px;
 }
 .Grid0 .HorizontalContainer1 .scroll-container {
   display: inline-block;
@@ -157,87 +235,79 @@
 }
 .Grid0 .HorizontalContainer1 .Promoted-colleges {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: stretch;
-  padding: 10px 0;
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-left: 50px;
+  margin-top: 15px;
+  margin-left: 40px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
 }
-.Grid0 .HorizontalContainer1 .promoted-colleges-wrapper {
-  width: 100%;
-  padding: 10px 0;
-  overflow-x: auto;
-}
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU {
-  background-color: #fff;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college {
+  margin-left: 20px;
+  display: flex;
+  background-color: white;
+  height: 85px;
   border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 500px;
-  margin-right: 10px;
-  padding: 10px;
-  height: 80px;
+  width: 560px;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Left {
+  margin-top: 10px;
+  margin-left: 0px;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Left img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 10px;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Left .logo {
+  height: 60px;
+  width: 70px;
+  position: absolute;
+  margin-left: 10px;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Left h5 {
-  font-size: 1rem;
-  color: #333;
-  margin: 0;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Left h5 {
+  margin-top: 5px;
+  margin-left: 100px;
+  font-size: 17px;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Left p {
-  font-size: 0.65rem;
-  color: #666;
-  margin: 0;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Left p {
+  margin-top: 3px;
+  margin-left: 100px;
+  font-size: 13px;
+  font-weight: 300;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Right {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  margin-top: auto;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Right {
+  margin-left: 100px;
+  margin-top: 10px;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Right button {
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  cursor: pointer;
-  flex-grow: 1;
-}
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Right button:first-child {
-  margin-right: 10px;
-}
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Right button.Add-colleges {
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Right .Add-colleges {
+  margin-top: 2px;
+  border-radius: 15px;
   background-color: rgb(29, 26, 57);
   color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  position: absolute;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Right button.view {
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Right .view {
+  margin-top: 40px;
+  border-radius: 15px;
   background-color: rgb(69, 25, 82);
   color: white;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
 }
-.Grid0 .HorizontalContainer1 .Promoted-colleges .CPU .Right button:hover {
-  opacity: 0.8;
+.Grid0 .HorizontalContainer1 .Promoted-colleges .college .Right button:hover {
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
 }
 .Grid0 .HorizontalContainer2 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: calc(100% - 160px);
-  margin-left: 160px;
   background-color: rgb(217, 217, 217);
   position: absolute;
   margin-top: 412px;
@@ -247,167 +317,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* Adjust button hover effects */
+  /* Add this to your Colleges.scss file */
 }
-.Grid0 .HorizontalContainer2 + .Tabs {
-  background-color: white;
-  margin-top: 10px;
-  margin-left: 80px;
-  border-radius: 8px;
-  height: 40px;
-  width: 1200px;
-}
-.Grid0 .HorizontalContainer2 + .Tabs .Prev {
-  margin-top: 10px;
-  margin-left: 800px;
-  position: absolute;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: white;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(69, 25, 82);
-}
-.Grid0 .HorizontalContainer2 + .Tabs .Next {
-  margin-top: 10px;
-  margin-left: 1060px;
-  position: absolute;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: white;
-  border-radius: 15px;
-  border: none;
-  background-color: rgb(69, 25, 82);
-}
-.Grid0 .HorizontalContainer2 + .Tabs button:hover {
-  background-color: rgb(0, 0, 0);
-  color: aliceblue;
-}
-.Grid0 .HorizontalContainer2 .CPU {
-  margin-top: 15px;
-  margin-left: 150px;
-  display: flex;
-  background-color: white;
-  width: 100px;
-  height: 130px;
-  border-radius: 25px;
-}
-.Grid0 .HorizontalContainer2 .CPU .CPU1 {
-  margin-left: 20px;
-  margin-top: 25px;
-  height: 80px;
-  width: 90px;
-  position: absolute;
-}
-.Grid0 .HorizontalContainer2 .CPU h5 {
-  margin-top: 30px;
-  margin-left: 130px;
-  font-weight: 600;
-  font-size: 25px;
-}
-.Grid0 .HorizontalContainer2 .CPU p {
-  margin-top: 4px;
-  margin-left: 130px;
-  font-size: 13px;
-  font-weight: 300;
-}
-.Grid0 .HorizontalContainer2 .CPU .Add-colleges {
-  color: white;
-  background-color: rgb(29, 26, 57);
-  margin-top: 60px;
-  margin-left: 360px;
-  position: absolute;
-  border-radius: 10px;
-  border: none;
-  font-size: 10px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.Grid0 .HorizontalContainer2 .CPU .view {
-  background-color: rgb(69, 25, 82);
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 10px;
-  color: white;
-  border: none;
-  margin-top: 90px;
-  margin-left: 360px;
-  position: absolute;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.Grid0 .HorizontalContainer2 .CPU button:hover {
-  background-color: rgb(0, 0, 0);
-  color: aliceblue;
-}
-.Grid0 .HorizontalContainer2 .CPU1 {
-  margin-top: 30px;
-  margin-left: 150px;
-  display: flex;
-  background-color: white;
-  width: 1000px;
-  height: 130px;
-  border-radius: 25px;
-}
-.Grid0 .HorizontalContainer2 .CPU1 .CPU1 {
-  margin-left: 20px;
-  margin-top: 25px;
-  height: 80px;
-  width: 90px;
-  position: absolute;
-}
-.Grid0 .HorizontalContainer2 .CPU1 h5 {
-  margin-top: 30px;
-  margin-left: 130px;
-  font-weight: 600;
-  font-size: 25px;
-}
-.Grid0 .HorizontalContainer2 .CPU1 p {
-  margin-top: 4px;
-  margin-left: 130px;
-  font-size: 13px;
-  font-weight: 300;
-}
-.Grid0 .HorizontalContainer2 .CPU1 .Add-colleges {
-  color: white;
-  background-color: rgb(29, 26, 57);
-  margin-top: 60px;
-  margin-left: 360px;
-  position: absolute;
-  border-radius: 10px;
-  border: none;
-  font-size: 10px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.Grid0 .HorizontalContainer2 .CPU1 .view {
-  background-color: rgb(69, 25, 82);
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 10px;
-  color: white;
-  border: none;
-  margin-top: 90px;
-  margin-left: 360px;
-  position: absolute;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.Grid0 .HorizontalContainer2 .CPU1 button:hover {
-  background-color: rgb(0, 0, 0);
-  color: aliceblue;
-}
-
-.college-list {
+.Grid0 .HorizontalContainer2 .college-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -419,11 +332,10 @@
   padding-top: 20px;
   border-radius: 15px;
 }
-.college-list h5 {
+.Grid0 .HorizontalContainer2 .college-list h5 {
   font-size: 20px;
 }
-
-.college-item {
+.Grid0 .HorizontalContainer2 .college-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -435,28 +347,24 @@
   width: 70rem;
   max-width: 100%;
 }
-
-.college-logo {
+.Grid0 .HorizontalContainer2 .college-logo {
   flex-shrink: 0;
   width: 100px;
   height: auto;
   margin-right: 20px;
 }
-
-.college-details {
+.Grid0 .HorizontalContainer2 .college-details {
   flex-grow: 1;
   min-width: 0;
   padding-right: 10px;
 }
-
-.buttons-container {
+.Grid0 .HorizontalContainer2 .buttons-container {
   display: flex;
   gap: 10px;
   flex-shrink: 0;
 }
-
-.add-to-colleges,
-.view {
+.Grid0 .HorizontalContainer2 .add-to-colleges,
+.Grid0 .HorizontalContainer2 .view {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -465,52 +373,47 @@
   white-space: nowrap;
   margin-right: 5px;
 }
-.add-to-colleges:hover,
-.view:hover {
+.Grid0 .HorizontalContainer2 .add-to-colleges:hover,
+.Grid0 .HorizontalContainer2 .view:hover {
   opacity: 0.8;
 }
-
-.add-to-colleges {
+.Grid0 .HorizontalContainer2 .add-to-colleges {
   background-color: rgb(29, 26, 57);
   color: white;
 }
-
-.view {
+.Grid0 .HorizontalContainer2 .view {
   background-color: rgb(69, 25, 82);
   color: white;
 }
-
 @media (max-width: 1600px) {
-  .college-list {
+  .Grid0 .HorizontalContainer2 .college-list {
     margin-left: 0;
     max-width: 100%;
   }
-  .college-item {
+  .Grid0 .HorizontalContainer2 .college-item {
     margin-right: 0;
   }
 }
-body, html {
+.Grid0 .HorizontalContainer2 body, .Grid0 .HorizontalContainer2 html {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
-
-.Promoted-colleges .CPU .Left img {
+.Grid0 .HorizontalContainer2 .CPU .Left img {
   width: 60px;
   height: auto;
   margin-right: 20px;
 }
-
-.Promoted-colleges .CPU .Right {
+.Grid0 .HorizontalContainer2 .CPU .Right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding-left: 10px;
 }
-.Promoted-colleges .CPU .Right button {
+.Grid0 .HorizontalContainer2 .CPU .Right button {
   border: none;
   border-radius: 20px;
   padding: 6px 15px;
@@ -521,46 +424,40 @@ body, html {
   text-align: center;
   margin-bottom: 8px;
 }
-.Promoted-colleges .CPU .Right button:last-child {
+.Grid0 .HorizontalContainer2 .CPU .Right button:last-child {
   margin-bottom: 0;
 }
-.Promoted-colleges .CPU .Right button.Add-colleges {
+.Grid0 .HorizontalContainer2 .CPU .Right button.Add-colleges {
   background-color: rgb(29, 26, 57);
   color: white;
 }
-.Promoted-colleges .CPU .Right button.view {
+.Grid0 .HorizontalContainer2 .CPU .Right button.view {
   background-color: rgb(69, 25, 82);
   color: white;
 }
-.Promoted-colleges .CPU .Right button:hover {
+.Grid0 .HorizontalContainer2 .CPU .Right button:hover {
   opacity: 0.8;
 }
-
-.Promoted-colleges .CPU .Right button {
+.Grid0 .HorizontalContainer2 .CPU .Right button {
   padding: 6px 15px; /* Reduced padding */
   font-size: 0.75rem; /* Smaller font size */
   border-radius: 15px; /* Smaller radius for a less bulky look */
   margin-bottom: 5px; /* Reduced space between buttons */
 }
-
-/* Adjust button hover effects */
-.Promoted-colleges .CPU .Right button:hover {
+.Grid0 .HorizontalContainer2 .CPU .Right button:hover {
   opacity: 0.9; /* Slightly less transparent on hover for better visibility */
 }
-
-/* Add this to your Colleges.scss file */
-.added-to-colleges {
+.Grid0 .HorizontalContainer2 .added-to-colleges {
   background-color: #4CAF50; /* Green background to indicate success */
   color: white; /* White text color for contrast */
   cursor: not-allowed; /* Show that the button is disabled */
 }
-.added-to-colleges:hover {
+.Grid0 .HorizontalContainer2 .added-to-colleges:hover {
   background-color: #4CAF50; /* Keep the same color even on hover */
   opacity: 1; /* No change in opacity on hover */
 }
-
-.add-to-colleges,
-.added-to-colleges {
+.Grid0 .HorizontalContainer2 .add-to-colleges,
+.Grid0 .HorizontalContainer2 .added-to-colleges {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
@@ -569,12 +466,11 @@ body, html {
   margin-right: 5px;
   transition: background-color 0.3s, opacity 0.3s;
 }
-.add-to-colleges:hover,
-.added-to-colleges:hover {
+.Grid0 .HorizontalContainer2 .add-to-colleges:hover,
+.Grid0 .HorizontalContainer2 .added-to-colleges:hover {
   opacity: 0.8;
 }
-
-.popup-message {
+.Grid0 .HorizontalContainer2 .popup-message {
   position: fixed;
   top: 20px;
   left: 50%;
