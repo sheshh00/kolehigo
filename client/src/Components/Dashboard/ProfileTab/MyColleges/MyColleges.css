@@ -7,29 +7,9 @@
   height: 1000px;
   position: fixed;
 }
-.Grid2 .VerticalContainer .Logout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 10px;
-  font-size: 16px;
-  margin-left: 20px;
-  margin-top: 20px;
-  filter: brightness(100%);
-}
-.Grid2 .VerticalContainer .Logout img {
-  width: 30px;
-  height: 30px;
-}
-.Grid2 .VerticalContainer .Logout:hover {
-  background-color: rgba(144, 38, 112, 0.8);
-}
-.Grid2 .VerticalContainer .Logout:hover img {
-  filter: none;
-}
 .Grid2 .VerticalContainer img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-left: 10px;
   margin-top: 20px;
 }
@@ -53,16 +33,13 @@
   padding-bottom: 10px;
 }
 .Grid2 .VerticalContainer .Profile {
-  background-color: rgba(255, 255, 255, 0);
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
-  color: rgb(217, 217, 217);
 }
 .Grid2 .VerticalContainer .Profile img {
-  filter: invert(100%);
   margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
@@ -70,15 +47,14 @@
 }
 .Grid2 .VerticalContainer .Colleges {
   padding-top: 10px;
-  background-color: rgb(217, 217, 217);
-  color: rgb(0, 0, 0);
+  background-color: rgba(144, 38, 112, 0);
+  color: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 20px;
 }
 .Grid2 .VerticalContainer .Colleges img {
-  filter: brightness(0);
   margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
@@ -102,16 +78,6 @@
 .Grid2 .VerticalContainer img {
   -o-object-fit: contain;
      object-fit: contain;
-}
-.Grid2 .VerticalContainer .Notifications {
-  padding: 5px;
-  font-size: 14px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-.Grid2 .VerticalContainer .Notifications img {
-  width: 30px;
-  height: 30px;
 }
 .Grid2 .HorizontalContainer {
   background-color: rgb(217, 217, 217);
@@ -351,87 +317,4 @@
   background-color: rgb(69, 25, 82);
   color: white;
   margin-bottom: 4.5rem;
-}
-
-.modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Modal Content Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-}
-
-/* Add Animation */
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Course display styling */
-.display-course {
-  background: #f4f4f4;
-  border: 1px solid #ddd;
-  margin-top: 8px;
-  padding: 8px;
-  border-radius: 4px;
-}
-
-.apply-button {
-  margin-left: 10px;
-  padding: 8px;
-  background-color: rgb(152, 93, 170);
-  border-radius: 10px;
-  height: 40px;
-  font-weight: bolder;
-}
-
-.container_submission {
-  padding: 10px;
-  background-color: gray;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 5px;
-}
-
-.checkmark {
-  color: green; /* Green color for the checkmark */
-  margin-left: 8px; /* Space between the document name and the checkmark */
 }/*# sourceMappingURL=MyColleges.css.map */

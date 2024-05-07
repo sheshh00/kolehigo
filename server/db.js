@@ -16,4 +16,4 @@ async function alterDB() {
     }
 }
 
-alterDB();
+// alterDB();
