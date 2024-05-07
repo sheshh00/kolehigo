@@ -1,15 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 import { Link } from 'react-router-dom';
-import './MyColleges.css'; // Ensure this CSS file includes the updated styles
+import './MyColleges.css';
 import '../../../../App.css';
 import SideBar from '../../../../Components/Dashboard/VerticalContainer';
 import ProfileName from '../../../../Components/Dashboard/ProfileName';
 import { useColleges } from '../../../Dashboard/Colleges/CollegeContext.jsx';
 
-// Assuming you have icons if needed or other imports
-
 const MyColleges = () => {
     const { myColleges } = useColleges();
+    const [courses, setCourses] = useState({});
+    const [loading, setLoading] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
+    const [enrollmentModalVisible, setEnrollmentModalVisible] = useState(false);
+    const [selectedCollege, setSelectedCollege] = useState('');
+    const [selectedCourse, setSelectedCourse] = useState(null);
+    const [applicationSubmitted, setApplicationSubmitted] = useState(false);
+
+    
+
+    const fetchCourses = (collegeName) => {
+        const url = `http://localhost:3011/courses/${encodeURIComponent(collegeName)}`;
+        setLoading(true);
+        Axios.get(url)
+            .then(response => {
+                setCourses(prevCourses => ({
+                    ...prevCourses,
+                    [collegeName.toLowerCase()]: response.data
+                }));
+                setLoading(false);
+                setModalVisible(true);
+                setSelectedCollege(collegeName);
+            })
+            .catch(error => {
+                console.error('Failed to fetch courses:', error);
+                setLoading(false);
+            });
+    };
+
+    useEffect(() => {
+        if (applicationSubmitted) {
+            // You can set a timeout to hide the message after a few seconds if needed
+            setTimeout(() => {
+                setApplicationSubmitted(false);
+            }, 500);
+        }
+    }, [applicationSubmitted]);
+
+
+    const handleApply = (course) => {
+        setSelectedCourse(course);
+        setEnrollmentModalVisible(true);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // First, simulate the form submission, then update the state.
+        console.log('Submitting application for:', selectedCourse.course, 'at', selectedCollege);
+        setEnrollmentModalVisible(false);  // Close the enrollment modal
+        setApplicationSubmitted(true);     // Set application submitted to true to show the success message
+    };
+
+    const closeModal = () => {
+        setModalVisible(false);
+        setEnrollmentModalVisible(false);
+        setApplicationSubmitted(false); // Also reset the success message state when closing modals
+    };
 
     return (
         <div className="Grid2">
@@ -38,13 +94,56 @@ const MyColleges = () => {
                         <div className="mycollege-details">
                             <h5>{college.name}</h5>
                             <p>{college.address}</p>
-                        </div>
-                        <div className="mybuttons-container">
-                            <button className="myview">View Courses</button>
+                            <button onClick={() => fetchCourses(college.name)} className="myview">
+                                View Courses
+                            </button>
                         </div>
                     </div>
                 ))}
+                {loading && <p>Loading...</p>}
             </div>
+            {modalVisible && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <span className="close" onClick={closeModal}>&times;</span>
+                        <h2>Courses at {selectedCollege.toUpperCase()}</h2>
+                        {courses[selectedCollege.toLowerCase()] && courses[selectedCollege.toLowerCase()].map(course => (
+                            <div key={course.id} className='display-course'>
+                                <p>{course.course}
+                                    <button onClick={() => handleApply(course)} className='apply-button'>Apply</button>
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+            {applicationSubmitted && (
+                <div className="success-message">
+                    You have successfully submitted your application for {selectedCourse.course} at {selectedCollege}.
+                </div>
+            )}
+
+            {enrollmentModalVisible && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <span className="close" onClick={closeModal}>&times;</span>
+                        <h2>Apply for {selectedCourse.course}</h2>
+                        <br></br>
+                        <p>Enrollment process for {selectedCourse.course} at {selectedCollege}.</p>
+                        <br></br>
+                        <form onSubmit={handleSubmit}>
+                            <li>Form 137 <span className="checkmark">&#10003;</span></li>
+                            <li>Good Moral <span className="checkmark">&#10003;</span></li>
+                            <li>2pcs. of 2x2 ID Picture <span className="checkmark">&#10003;</span></li>
+                            <li>Birth Certificate <span className="checkmark">&#10003;</span></li>
+                            
+                            <br></br><br></br>
+                            <button type="submit" className='apply-button'>Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+            )}
+            
         </div>
     );
 };
