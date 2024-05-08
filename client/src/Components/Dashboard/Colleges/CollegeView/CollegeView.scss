@@ -2,53 +2,80 @@
     background-image: linear-gradient(rgb(102 37 73),rgb(73 0 94));
 
     .VerticalContainer {
-        background-image: linear-gradient(rgb(102 37 73), rgb(102 37 73), rgb(102 37 73));
-        width: 160px;
+        background-image: linear-gradient(rgb(102 37 73),rgb(73 0 94), rgb(29 26 57));
+        width: 85px;
         height: 1000px; 
         position: fixed;
         
         img{
-            width: 150px;
-            height: 150px;
-            margin-left: 10px;
-            margin-top: 20px;
+            width: 80px;
+            height: 100px;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
-    
+        
+        
         button {
             font-size: medium;
-            background-color: rgba(255, 255, 255, 0);
+            background-color: rgba(144, 38, 112, 0);
         }
         
         button:hover {
-            background-color:rgb(217 217 217);
+            background-color:   rgb(217 217 217);
             color: black;
         
             img {
                 filter: brightness(0); 
-                cursor: pointer; 
+                cursor: pointer;
+                margin-left: 10px;
             }
         }
+
+        .Notifications, .Logout {
+            width: 100%;
+            background-color: rgba(144, 38, 112, 0);  // Transparent background initially
+            color: rgb(217 217 217);  // Light grey text color
+            border: none;
+            cursor: pointer;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;  // Matching font size
+
+            img {
+                margin-bottom: -10px;
+                width: 60px;
+                height: 81px;
+            }
+
+            &:hover {
+                background-color: rgb(217 217 217);  // Hover background color
+                color: black;  // Hover text color
+
+                img {
+                    filter: brightness(0);
+                    cursor: pointer;
+                }
+            }
+        }
+
         .Profile, .Colleges, .Scholarships {
-            
             width: 100%;
             background-color: rgb(217 217 217);
             border: none;
             cursor: pointer;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
         }
         
         .Profile {
-            background-color: rgba(255, 255, 255, 0);
-            margin-top: 40px;
+            margin-top: 91px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 20px;
-            color: rgb(217 217 217);
+            font-size: 15px;
     
             img {
-                filter: invert(100%);
-                margin-right: 11px;
                 margin-bottom: -10px; 
                 width: 60px;
                 height: 81px;
@@ -57,17 +84,15 @@
         }
     
         .Colleges {
-            padding-top: 10px;
-            background-color: rgb(217 217 217);
-            color: rgb(0, 0, 0);
+
+            background-color: rgba(144, 38, 112, 0); 
+            color: rgb(217 217 217);
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 20px;
+            font-size: 15px;
     
             img {
-                filter: brightness(0); 
-                margin-right: 11px;
                 margin-bottom: -10px; 
                 width: 60px;
                 height: 81px;
@@ -76,15 +101,13 @@
     
     
         .Scholarships {
-            padding-top: 10px;
             background-color: rgba(144, 38, 112, 0);
             color: rgb(217 217 217);
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 20px;
+            font-size: 13px;
             img {
-                margin-right: 11px;
                 margin-bottom: -10px; 
                 width: 60px;
                 height: 81px;

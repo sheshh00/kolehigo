@@ -2,20 +2,20 @@
   background-image: linear-gradient(rgb(102, 37, 73), rgb(73, 0, 94));
 }
 .Grid5 .VerticalContainer {
-  background-image: linear-gradient(rgb(102, 37, 73), rgb(102, 37, 73), rgb(102, 37, 73));
-  width: 160px;
+  background-image: linear-gradient(rgb(102, 37, 73), rgb(73, 0, 94), rgb(29, 26, 57));
+  width: 85px;
   height: 1000px;
   position: fixed;
 }
 .Grid5 .VerticalContainer img {
-  width: 150px;
-  height: 150px;
-  margin-left: 10px;
-  margin-top: 20px;
+  width: 80px;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .Grid5 .VerticalContainer button {
   font-size: medium;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(144, 38, 112, 0);
 }
 .Grid5 .VerticalContainer button:hover {
   background-color: rgb(217, 217, 217);
@@ -24,57 +24,74 @@
 .Grid5 .VerticalContainer button:hover img {
   filter: brightness(0);
   cursor: pointer;
+  margin-left: 10px;
+}
+.Grid5 .VerticalContainer .Notifications, .Grid5 .VerticalContainer .Logout {
+  width: 100%;
+  background-color: rgba(144, 38, 112, 0);
+  color: rgb(217, 217, 217);
+  border: none;
+  cursor: pointer;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.Grid5 .VerticalContainer .Notifications img, .Grid5 .VerticalContainer .Logout img {
+  margin-bottom: -10px;
+  width: 60px;
+  height: 81px;
+}
+.Grid5 .VerticalContainer .Notifications:hover, .Grid5 .VerticalContainer .Logout:hover {
+  background-color: rgb(217, 217, 217);
+  color: black;
+}
+.Grid5 .VerticalContainer .Notifications:hover img, .Grid5 .VerticalContainer .Logout:hover img {
+  filter: brightness(0);
+  cursor: pointer;
 }
 .Grid5 .VerticalContainer .Profile, .Grid5 .VerticalContainer .Colleges, .Grid5 .VerticalContainer .Scholarships {
   width: 100%;
   background-color: rgb(217, 217, 217);
   border: none;
   cursor: pointer;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 .Grid5 .VerticalContainer .Profile {
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: 40px;
+  margin-top: 91px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
-  color: rgb(217, 217, 217);
+  font-size: 15px;
 }
 .Grid5 .VerticalContainer .Profile img {
-  filter: invert(100%);
-  margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
   height: 81px;
 }
 .Grid5 .VerticalContainer .Colleges {
-  padding-top: 10px;
-  background-color: rgb(217, 217, 217);
-  color: rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-}
-.Grid5 .VerticalContainer .Colleges img {
-  filter: brightness(0);
-  margin-right: 11px;
-  margin-bottom: -10px;
-  width: 60px;
-  height: 81px;
-}
-.Grid5 .VerticalContainer .Scholarships {
-  padding-top: 10px;
   background-color: rgba(144, 38, 112, 0);
   color: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 15px;
+}
+.Grid5 .VerticalContainer .Colleges img {
+  margin-bottom: -10px;
+  width: 60px;
+  height: 81px;
+}
+.Grid5 .VerticalContainer .Scholarships {
+  background-color: rgba(144, 38, 112, 0);
+  color: rgb(217, 217, 217);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
 }
 .Grid5 .VerticalContainer .Scholarships img {
-  margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
   height: 81px;

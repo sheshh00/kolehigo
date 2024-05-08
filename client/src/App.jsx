@@ -1,21 +1,19 @@
-import React from 'react';
-import './App.css';
-
-// DEFAULT PROFILE TAB
-import Dashboard from './Components/Dashboard/Dashboard';
-
-// UNDER PROFILE TAB
-import LogInCredentials from './Components/Dashboard/ProfileTab/LogInCredentials/LogInCredentials';
-import MyColleges from './Components/Dashboard/ProfileTab/MyColleges/MyColleges';
-
-// UNDER DASHBOARD
-import Colleges from './Components/Dashboard/Colleges/Colleges';
+import './App.css'
+//DEFAULT PROFILE TAB
+import Dashboard from './Components/Dashboard/Dashboard'
+//UNDER PROFILETAB
+import LogInCredentials from './Components/Dashboard/ProfileTab/LogInCredentials/LogInCredentials'
+import DocumentsUploaded from './Components/Dashboard/ProfileTab/DocumentsUploaded/DocumentsUploaded'
+import MyColleges from './Components/Dashboard/ProfileTab/MyColleges/MyColleges'
+import EducationalBackground from './Components/Dashboard/ProfileTab/EducationalBackground/EducationalBackground.jsx'
+//UNDER DASHBOARD
+import Colleges from './Components/Dashboard/Colleges/Colleges'
+import Scholarships from './Components/Dashboard/Scholarships/Scholarships'
 
 //DISREGARD
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 //TABS
-
 //Under view tab for colleges
 import CollegeView from './Components/Dashboard/Colleges/CollegeView/CollegeView'
 
@@ -50,7 +48,25 @@ const router = createBrowserRouter([
     path: '/MyColleges',
     element: <div><MyColleges/></div>
   },
-]);
+  {
+    path: '/Scholarships',
+    element: <div><Scholarships/></div>
+  },
+  {
+    path: '/CollegeView',
+    element: <div><CollegeView/></div>
+  },
+  {
+    path: '/DocumentsUploaded',
+    element: <div><DocumentsUploaded/></div>
+  },
+  {
+    path: '/EducationalBackground',
+    element: <div><EducationalBackground/></div>
+  },
+])
+
+
 
 function App() {
   return (

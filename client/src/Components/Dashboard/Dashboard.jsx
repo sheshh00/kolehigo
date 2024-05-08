@@ -111,7 +111,7 @@ const Dashboard = () => {
                     <div className="MiniTabs">
                         <Link to={'/Dashboard'}><button className="ApplicantInfo">Applicant's Information</button></Link>
                         <Link to={'/LogInCredentials'}><button className="LogCred">Log In Credentials</button></Link>
-                        <button className="EduBack">Educational Background</button>
+                        <Link to={'/EducationalBackground'}><button className="EduBack">Educational Background</button></Link>
                         <Link to={'/MyColleges'}><button className="MyColleges">My Colleges</button></Link>
                         <button className="InterSchol">Interested Scholarships</button>
                         <button className="DocUplo">Documents Uploaded</button>

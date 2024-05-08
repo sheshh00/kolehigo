@@ -27,7 +27,35 @@ db.connect((err) => {
 
 // Endpoint to get the list of colleges with optional filtering
 app.get('/colleges', (req, res) => {
-    db.query('SELECT * FROM colleges', (err, results) => {
+    let sqlQuery = 'SELECT * FROM college WHERE 1=1';
+    const params = [];
+
+    // Filter by name if provided
+    if (req.query.name) {
+        sqlQuery += ' AND name LIKE ?';
+        params.push(`%${req.query.name}%`);
+    }
+
+    // Filter by location if provided
+    if (req.query.location) {
+        sqlQuery += ' AND location LIKE ?';
+        params.push(`%${req.query.location}%`);
+    }
+
+    // Filter by type (Public or Private) if provided
+    if (req.query.type) {
+        sqlQuery += ' AND type = ?';
+        params.push(req.query.type);
+    }
+
+    // Filter by area (Urban or Rural) if provided
+    if (req.query.area) {
+        sqlQuery += ' AND area = ?';
+        params.push(req.query.area);
+    }
+
+    // Execute the query with the filtered parameters
+    db.query(sqlQuery, params, (err, results) => {
         if (err) {
             console.error('Error fetching colleges:', err);
             return res.status(500).send({ error: 'Error fetching colleges' });
@@ -42,7 +70,6 @@ app.listen(3010, () => {
 });
 
 module.exports = app; // For testing or further modularization
-
 
 
 

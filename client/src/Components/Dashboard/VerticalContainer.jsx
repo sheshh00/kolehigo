@@ -22,7 +22,7 @@ const VerticalContainer = () => {
     return (
         <div>
             <div className='VerticalContainer'>
-                <img src={Koheligo} alt="KoheliGO icon"/>
+                <img  className='icon' src={Koheligo} alt="KoheliGO icon"/>
                 <Link to={'/Dashboard'}>
                     <button className="Profile">
                         <img src={Profile} alt="Profile icon"/> Profile

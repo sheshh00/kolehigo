@@ -9,10 +9,10 @@
   position: fixed;
 }
 .Grid .VerticalContainer img {
-  width: 150px;
-  height: 150px;
-  margin-left: 10px;
-  margin-top: 20px;
+  width: 80px;
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 .Grid .VerticalContainer button {
   font-size: medium;
@@ -25,53 +25,74 @@
 .Grid .VerticalContainer button:hover img {
   filter: brightness(0);
   cursor: pointer;
+  margin-left: 10px;
+}
+.Grid .VerticalContainer .Notifications, .Grid .VerticalContainer .Logout {
+  width: 100%;
+  background-color: rgba(144, 38, 112, 0);
+  color: rgb(217, 217, 217);
+  border: none;
+  cursor: pointer;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.Grid .VerticalContainer .Notifications img, .Grid .VerticalContainer .Logout img {
+  margin-bottom: -10px;
+  width: 60px;
+  height: 81px;
+}
+.Grid .VerticalContainer .Notifications:hover, .Grid .VerticalContainer .Logout:hover {
+  background-color: rgb(217, 217, 217);
+  color: black;
+}
+.Grid .VerticalContainer .Notifications:hover img, .Grid .VerticalContainer .Logout:hover img {
+  filter: brightness(0);
+  cursor: pointer;
 }
 .Grid .VerticalContainer .Profile, .Grid .VerticalContainer .Colleges, .Grid .VerticalContainer .Scholarships {
   width: 100%;
   background-color: rgb(217, 217, 217);
   border: none;
   cursor: pointer;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 .Grid .VerticalContainer .Profile {
-  margin-top: 36px;
+  margin-top: 91px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 15px;
 }
 .Grid .VerticalContainer .Profile img {
-  margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
   height: 81px;
 }
 .Grid .VerticalContainer .Colleges {
-  padding-top: 10px;
   background-color: rgba(144, 38, 112, 0);
   color: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 15px;
 }
 .Grid .VerticalContainer .Colleges img {
-  margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
   height: 81px;
 }
 .Grid .VerticalContainer .Scholarships {
-  padding-top: 10px;
   background-color: rgba(144, 38, 112, 0);
   color: rgb(217, 217, 217);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 13px;
 }
 .Grid .VerticalContainer .Scholarships img {
-  margin-right: 11px;
   margin-bottom: -10px;
   width: 60px;
   height: 81px;

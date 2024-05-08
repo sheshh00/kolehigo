@@ -83,6 +83,85 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+.Grid0 .VerticalContainer .Notifications {
+  margin-left: 38px;
+  border: none;
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Grid0 .VerticalContainer .Notifications img {
+  margin-left: 2px;
+  width: 50px;
+  height: 40px;
+}
+.Grid0 .VerticalContainer .Notifications:hover {
+  color: rgba(253, 253, 253, 0.697);
+  background-color: rgba(155, 97, 22, 0);
+}
+.Grid0 .VerticalContainer .Logout {
+  border: none;
+  margin-left: 50px;
+  margin-top: 60px;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+.Grid0 .VerticalContainer .Logout img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.Grid0 .VerticalContainer .Logout:hover {
+  color: rgba(211, 211, 211, 0.566);
+  background-color: rgba(155, 97, 22, 0);
+}
+.Grid0 .VerticalContainer .Notifications:hover img,
+.Grid0 .VerticalContainer .Logout:hover img {
+  filter: invert(30%);
+}
+.Grid0 .VerticalContainer .notification-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content {
+  height: 500px;
+  width: 1000px;
+  background-color: rgba(0, 0, 0, 0.448);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: aliceblue;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content h2 {
+  margin-bottom: 10px;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content button {
+  margin-top: 360px;
+  padding: 8px 20px;
+  border: none;
+  background-color: #eeeeee;
+  color: rgb(3, 3, 3);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.Grid0 .VerticalContainer .notification-overlay .notification-content button:hover {
+  background-color: rgba(255, 255, 255, 0.4235294118);
+}
 .Grid0 .HorizontalContainer {
   background-image: linear-gradient(rgb(73, 0, 94), rgb(102, 37, 73), rgb(102, 37, 73));
   margin-left: 160px;
@@ -192,7 +271,7 @@
   font-weight: 300;
 }
 .Grid0 .HorizontalContainer1 .Promoted-colleges .college .Right {
-  margin-left: 30px;
+  margin-left: 100px;
   margin-top: 10px;
 }
 .Grid0 .HorizontalContainer1 .Promoted-colleges .college .Right .Add-colleges {
@@ -253,63 +332,11 @@
   padding-top: 20px;
   border-radius: 15px;
 }
-.college-list .label-container {
-  display: flex; /* Enables flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  align-items: center; /* Centers children horizontally */
-  justify-content: center; /* Centers children vertically */
-  padding: 20px; /* Adds some padding around the content */
-  width: 200px;
-  background-color: gray; /* Extra space on top */
-  border-radius: 10px;
-}
-.college-list .label-container > div {
-  margin: 10px; /* Adds space between the rows of checkboxes */
-}
-.college-list .button-container {
-  display: flex;
-  justify-content: center; /* Center the button horizontally */
-  margin-top: 10px; /* Space above the button */
-}
-.college-list .toggle-filters-button {
-  background-color: #451952; /* Purple background */
-  color: white; /* White text for contrast */
-  border: none; /* No border for a cleaner look */
-  padding: 8px 16px; /* Smaller padding to reduce the size */
-  font-size: 14px; /* Smaller font size */
-  border-radius: 4px; /* Slightly rounded corners */
-  cursor: pointer; /* Cursor indicates it's clickable */
-  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
-  display: flex;
-  width: 100px;
-  font-size: 12px;
-}
-.college-list .toggle-filters-button:hover {
-  background-color: #451952; /* A lighter purple when hovered */
-}
-.college-list .Apply-filters {
-  background-color: #451952; /* A shade of purple */
-  position: relative;
-  color: white; /* White text color for contrast */
-  border: none; /* No border */
-  padding: 10px 10px; /* Top/bottom and left/right padding */
-  font-size: 12px; /* Font size */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Cursor indicates it's clickable */
-  margin-top: 10px; /* Space above the button */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-.college-list .Apply-filters:hover {
-  background-color: #7c2de9; /* Lighter purple when hovered */
-}
-.college-list h5 {
-=======
 .Grid0 .HorizontalContainer2 .college-list h5 {
   font-size: 20px;
 }
 .Grid0 .HorizontalContainer2 .college-item {
   display: flex;
-  margin-left: 150px;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
