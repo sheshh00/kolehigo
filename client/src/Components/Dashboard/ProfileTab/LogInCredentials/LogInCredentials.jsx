@@ -37,8 +37,17 @@ const LogInCredentials = () => {
                         <h1>Log Information</h1>
                         <p>Update, strengthen, and reinforce your accounts security</p>
                     </div>
+                    
                 </div>
                 <div class="HorizontalContainerBOTTOM">
+                <form>
+                        <div className="left">
+                            <input type="text" id='CurrentPassword' placeholder='Current Password'  autoComplete="off" />
+                            <input type="text" id='NewPassword' placeholder='New Password'  autoComplete="off"/>
+                            <input type="text" id='RetypePassword' placeholder='Retype Password'  autoComplete="off" />
+                            <button type="submit">Update</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
